@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="blocJams">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Bloc Base Project</title>
+    <title>Current Tasks</title>
     <link rel="stylesheet" href="/styles/style.css">
 </head>
+
+<ui-view></ui-view>
+
 <body>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<script src="js/angular-ui-router.min.js"></script>
+	<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
     <script src="/scripts/app.js"></script>
 </body>
 </html>
