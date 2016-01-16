@@ -8,6 +8,6 @@
 	}
 
 	angular
-		.module('blocJams')
+		.module('blocitoff')
 		.controller('ActiveCtrl', ['$scope', '$firebaseArray', ActiveCtrl]);
 })();

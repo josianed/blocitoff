@@ -21,7 +21,7 @@
 		}
 
 	angular
-		.module('blocJams', ['ui.router', 'firebase'])
+		.module('blocitoff', ['ui.router', 'firebase'])
 		.config(config);
 
 })();

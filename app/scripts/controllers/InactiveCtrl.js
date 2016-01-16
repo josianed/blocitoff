@@ -5,6 +5,6 @@
 	}
 
 	angular
-		.module('blocJams')
+		.module('blocitoff')
 		.controller('InactiveCtrl', [InactiveCtrl]);
 })();
