@@ -1,10 +1,9 @@
 (function() {
 	function ActiveCtrl($scope, $firebaseArray) {
 
-		var taskData = new Firebase("https://dazzling-inferno-2350.firebaseio.com/");
+		var ref = new Firebase("https://dazzling-inferno-2350.firebaseio.com/");
 
-		$scope.data = $firebaseArray(taskData);
-
+		$scope.task = $firebaseArray(ref);
 	}
 
 	angular
