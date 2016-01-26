@@ -1,6 +1,6 @@
 header {
 	color: rgb(0, 0, 0);
-	background-color: rgb(189, 187, 187);
+	background-color: rgb(193, 193, 189);
 }
 
 header h1 {
@@ -11,7 +11,7 @@ header h1 {
 
 html, body {
 	font-family: 'Open Sans';
-	background-color: rgb(209, 207, 207);
+	background-color: rgb(215, 216, 215);
 	margin: 0;
 	padding: 0;
 }

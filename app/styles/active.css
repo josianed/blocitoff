@@ -1,14 +1,23 @@
-.tasks-active {
-	margin: 0.05em;
-	background-color: rgb(238, 233, 233);
+table {
+	width: 100%;
+}
+
+tr {
+	height: 4em;
+	text-indent: 2em;
+}
+
+.tasks-active-row {
+	background-color: rgb(241, 241, 241);
+	font-size: 1em;
+	padding: 1em;
 }
 
 
 
 /* 
-<section class="active" 
-<div class="tasks-active">
-<table class="tasks-active">
-<tr class="tasks-active" 
-<td class="individual-task"
+ <div class="tasks-active">
+        <table class="tasks-active-table">
+            <tr class="tasks-active-row">
+               <td class="tasks-active-data">
 */

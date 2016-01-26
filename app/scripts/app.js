@@ -7,18 +7,19 @@
 		});
 
 		$stateProvider
-			.state('active', {
-				url: '/active',
-				controller: 'ActiveCtrl as active',
-				templateUrl: '/templates/active.html'
-			})
+		.state('active', {
+			url: '/active',
+			controller: 'ActiveCtrl',
+			controllerAs: 'active',
+			templateUrl: '/templates/active.html'
+		})
 
-			.state('inactive', {
-				url: '/inactive',
-				controller: 'InactiveCtrl as inactive',
-				templateUrl: '/templates/inactive.html'
-			});
-		}
+		.state('inactive', {
+			url: '/inactive',
+			controller: 'InactiveCtrl as inactive',
+			templateUrl: '/templates/inactive.html'
+		});
+	}
 
 	angular
 		.module('blocitoff', ['ui.router', 'firebase'])

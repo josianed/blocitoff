@@ -1,7 +1,10 @@
-<section class="active" ng-controller="ActiveCtrl as active">
+<section class="active">
+    <pre ng-if="false">{{active|json}}</pre>
     <div class="tasks-active">
-        <table class="tasks-active">
-            <tr class="tasks-active" ng-repeat="task in active">{{ task.$value }}</tr>
+        <table class="tasks-active-table">
+            <tr class="tasks-active-row" ng-repeat="task in active.tasks">
+                <td class="tasks-active-data">{{ task.description | json }}</td>
+            </tr>
         </table>
     </div>
 </section>
