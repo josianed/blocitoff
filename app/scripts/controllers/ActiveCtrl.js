@@ -7,6 +7,13 @@
 		var ref = new Firebase("https://dazzling-inferno-2350.firebaseio.com/");
 
 		vm.tasks = $firebaseArray(ref);
+		// retrieve date task was added
+		ref.once("child_added", function(snapshot) {
+			var newTask = snapshot.val();
+			var taskAdded = newTask.ts;
+		});
+
+		
 		// vm.tasks.$delete();
 
 		//adding tasks to firebase
