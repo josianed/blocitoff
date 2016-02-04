@@ -2,11 +2,9 @@
     <pre ng-if="false">{{active|json}}</pre>
     <div class="tasks-active">
         <table class="tasks-active-table">
-            <tr class="tasks-active-row" ng-repeat="task in active.tasks">
-                <td class="active-task-data ng-show=task.isActive ng-hide=!task.isActive">{{ task.description | json }}</td>
+            <tr class="tasks-active-row" ng-repeat="task in active.tasks" ng-hide="active.didTaskExpire(task)">
+                <td class="active-task-data">{{ task }}<span ng-bind="active.didTaskExpire(task)"></span></td>
             </tr>
         </table>
     </div>
 </section>
-
-

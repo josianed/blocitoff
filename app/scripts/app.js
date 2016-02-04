@@ -16,7 +16,8 @@
 
 		.state('inactive', {
 			url: '/inactive',
-			controller: 'InactiveCtrl as inactive',
+			controller: 'InactiveCtrl',
+			controllerAs: 'inactive',
 			templateUrl: '/templates/inactive.html'
 		});
 	}
