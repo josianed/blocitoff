@@ -1,4 +1,5 @@
 (function() {
+	'use strict';
 	function InactiveCtrl($log, $firebaseArray) {
 
 		var vm = this;
