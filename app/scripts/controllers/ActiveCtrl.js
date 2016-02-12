@@ -6,13 +6,11 @@
 		.module('blocitoff')
 		.controller(CONTROLLER_ID, ActiveCtrl);
 
-	ActiveCtrl.$inject = ['$log', '$firebase'];
+	ActiveCtrl.$inject = ['$log', '$firebaseArray'];
 
 	function ActiveCtrl($log, $firebaseArray) {
 		
 		var vm = this;
-		//vm = view model
-		// vm.getTaskAge = getTaskAge;
 		//bindable methods
 		vm.didTaskExpire = didTaskExpire;
 

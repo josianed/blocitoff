@@ -1,9 +1,9 @@
 <section class="inactive">
-    <pre ng-if="true">{{inactive|json}}</pre>
+    <pre ng-if="false">{{inactive|json}}</pre>
     <div class="tasks-inactive">
         <table class="tasks-inactive-table">
             <tr class="tasks-inactive-row" ng-repeat="task in inactive.tasks" ng-if="inactive.didTaskExpire(task)">
-                <td class="inactive-task-data">{{ task }}</td>
+                <td class="inactive-task-data">{{ task.description }}</td>
             </tr>
         </table>
     </div>
