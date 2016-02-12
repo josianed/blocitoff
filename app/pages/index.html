@@ -9,9 +9,11 @@
 	 </head>
 
 	<body>
-	    <header class="header">
-			<h1 class="title">Current Tasks</h1>
-		</header>
+	    
+    	<nav class="navbar"> 
+            <a ui-sref="active" class="active-tasks-nav">Active Tasks</a>
+            <a ui-sref="inactive" class="task-history-nav">Task History</a>
+        </nav>
 
 		<ui-view></ui-view>
 
