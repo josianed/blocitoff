@@ -6,6 +6,15 @@
     <pre ng-if="false">{{active|json}}</pre>
     <div class="tasks-active">
         <table class="tasks-active-table">
+
+			<form>
+				<div class="add-task-form">
+					<label for="EnterNewTask">Enter New Task: </label>
+					<input type="text" class="form-input" placeholder="Task">
+				</div>
+				<button type="submit" class="button" ng-click="active.addTask(task)">Add</button>
+			</form>
+
             <tr class="tasks-active-row" ng-repeat="task in active.tasks" ng-if="!active.didTaskExpire(task)">
                 <td class="active-task-data">{{ task.description }}</td>
             </tr>

@@ -13,6 +13,7 @@
 		var vm = this;
 		//bindable methods
 		vm.didTaskExpire = didTaskExpire;
+		vm.addTask = addTask;
 
 		activate();
 
@@ -47,11 +48,13 @@
 		// vm.tasks.$delete();
 
 		//adding tasks to firebase
-		// var now = new Date();
-		// vm.tasks.$add({
-		// 	description: "Do all the things!",
-		// 	ts: now.toUTCString()
-		// });
+		function addTask(task) {
+			var now = new Date();
+			vm.tasks.$add({
+				description: "New task added!",
+				ts: now.toUTCString()
+			});
+		}
 	}
 	
 })();
