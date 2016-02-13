@@ -10,13 +10,14 @@
 			<form>
 				<div class="add-task-form">
 					<label for="EnterNewTask">Enter New Task: </label>
-					<input type="text" class="form-input" placeholder="Task">
+					<input type="text" ng-model="active.tasks" class="form-input" placeholder="Task"> 
+					<button type="submit" class="button" ng-click="active.addTask(input)">Add</button>
+					<td class="new-task active-task-data">{{ newTasks.task }}</td>
 				</div>
-				<button type="submit" class="button" ng-click="active.addTask(task)">Add</button>
 			</form>
 
             <tr class="tasks-active-row" ng-repeat="task in active.tasks" ng-if="!active.didTaskExpire(task)">
-                <td class="active-task-data">{{ task.description }}</td>
+                <td class="active-task-data">{{ task }}</td>
             </tr>
         </table>
     </div>
