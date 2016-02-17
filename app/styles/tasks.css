@@ -3,8 +3,13 @@ table {
 }
 
 tr {
-	height: 4em;
+	height: 3em;
 	text-indent: 2em;
+}
+
+th {
+	height: 1em;
+	text-align: left;
 }
 
 .tasks-active-row {
@@ -20,6 +25,29 @@ tr {
 	text-decoration: line-through;
 }
 
+.table-row-labels {
+	height: 1em;
+	font-size: 0.9em;
+}
+
+.button {
+	background-color: rgb(56, 56, 55);
+	color: rgb(241, 241, 241);
+	cursor: pointer;
+	text-align: center;
+}
+
+.form-input {
+	background-color: rgb(241, 241, 241);
+	border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.enter-new-task {
+	background-color: rgb(241, 241, 241);
+}
+
 
 
 /* 
@@ -28,3 +56,8 @@ tr {
             <tr class="tasks-active-row">
                <td class="tasks-active-data">
 */
+
+
+/*<td><label for="EnterNewTask">Enter New Task</label></td>
+<td><input type="text" ng-model="active.tasks" class="form-input" placeholder="Task"> </td>
+<td><button type="submit" class="button" ng-click="active.addTask(input)">Add</button></td>*/

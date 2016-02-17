@@ -1,24 +1,36 @@
 <header class="header">
-	<h1 class="title">Current Tasks</h1>
+    <h1 class="title">Current Tasks</h1>
 </header>
 
 <section class="active">
     <pre ng-if="false">{{active|json}}</pre>
     <div class="tasks-active">
         <table class="tasks-active-table">
+            <thead> 
+                <tr>
+                    <td colspan="2">
+                        <form>
+                            <pre>{{ active.newTask }}</pre>
+                            <div class="add-task-form">
+                                <label for="EnterNewTask">Enter New Task</label>
+                                <input type="text" ng-disabled="!!!active.newTask.description" ng-model="active.newTask.description" class="form-input" placeholder="Task"> 
+                                <button type="submit" class="button" ng-click="active.addTask(input)">Add</button>
 
-			<form>
-				<div class="add-task-form">
-					<label for="EnterNewTask">Enter New Task: </label>
-					<input type="text" ng-model="active.tasks" class="form-input" placeholder="Task"> 
-					<button type="submit" class="button" ng-click="active.addTask(input)">Add</button>
-					<td class="new-task active-task-data">{{ newTasks.task }}</td>
-				</div>
-			</form>
-
-            <tr class="tasks-active-row" ng-repeat="task in active.tasks" ng-if="!active.didTaskExpire(task)">
-                <td class="active-task-data">{{ task }}</td>
-            </tr>
+                            </div>
+                        </form>
+                    </td>
+                </tr>
+                <tr class="table-row-labels">
+                    <th class="table-row-labels description">Task Description</th>
+                    <th class="table-row-labels priority">Priority</th>
+                </tr>
+            </thead>
+            <tbody>	
+                <tr class="tasks-active-row" ng-repeat="task in active.tasks" ng-if="!active.didTaskExpire(task)">
+                    <td class="active-task-data">{{ task.description }}</td>
+                    <td class="active-task-data">{{ task.priority }}</td>
+                </tr>
+            </tbody>
         </table>
     </div>
 </section>

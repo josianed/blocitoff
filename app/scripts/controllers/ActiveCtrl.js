@@ -14,6 +14,7 @@
 		//bindable methods
 		vm.didTaskExpire = didTaskExpire;
 		vm.addTask = addTask;
+		vm.newTask = {};
 
 		activate();
 
@@ -50,12 +51,28 @@
 		//adding tasks to firebase
 		function addTask(task) {
 			var now = new Date();
-			vm.tasks.$add({
-				description: "New task added!",
-				ts: now.toUTCString()
-			});
+			// vm.newTask.description = "test";
+			vm.newTask.ts = now.toUTCString();
+			vm.newTask.priority = "High";
+			vm.tasks.$add(vm.newTask);
+			vm.newTask = {};
 		}
 
 	}
+
+
+
+// 	Ryan10:36 PM
+// you should choose to use the fn arg “task” or depend on vm.newTask, not both
+// Ryan10:37 PM
+// which means changing 1 of 2 things
+// Ryan10:37 PM
+// the ng-click=“"
+// Ryan10:37 PM
+// or the fn itself
+// Me10:37 PM
+// ok
+// Me10:37 PM
+// thanks :) 
 	
 })();
