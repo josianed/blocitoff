@@ -2,6 +2,14 @@ input {
 	outline: none;
 }
 
+select {
+	outline: none;
+	text-indent: 2em;
+	-webkit-appearance: none;
+ 	-webkit-border-radius: 0px;
+}
+
+
 header {
 	color: rgb(0, 0, 0);
 	background-color: rgb(193, 193, 189);

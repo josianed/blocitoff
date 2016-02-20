@@ -13,22 +13,14 @@
 	padding-right: 3em;
 }
 
-.form-input-priority {
-	height: 4em;
-	text-indent: 0.7em;
-	border: none;
-	clear: left;
-	background-color: rgb(241, 241, 241);
-}
-
 .input {
 	float: left;
 	width: 90%;
 	background-color: rgb(241, 241, 241);
-	padding-right: 0.8em;
+	/*padding-right: 0.8em;*/
 }
 
-.button {
+.button, .priority-levels {
 	float: right;
 	height: 4.22em;
 	background-color: rgb(56, 56, 55);
@@ -38,6 +30,11 @@
 	text-align: center;
 	width: 8%;
 	padding: 0;
+}
+
+.priority-levels {
+	width: 25%;
+	position: relative;
 }
 
 .tasks-active-row {

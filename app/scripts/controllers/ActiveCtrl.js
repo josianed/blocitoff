@@ -53,7 +53,7 @@
 			var now = new Date();
 			// vm.newTask.description = "Hello";
 			vm.newTask.ts = now.toUTCString();
-			vm.newTask.priority = "High";
+			// vm.newTask.priority = "High";
 			vm.tasks.$add(vm.newTask);
 			vm.newTask = {};
 		}
