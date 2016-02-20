@@ -49,13 +49,13 @@
 		// vm.tasks.$delete();
 
 		//adding tasks to firebase
-		function addTask(task) {
+		function addTask() {
 			var now = new Date();
-			// vm.newTask.description = "test";
+			// vm.newTask.description = "Hello";
 			vm.newTask.ts = now.toUTCString();
 			vm.newTask.priority = "High";
 			vm.tasks.$add(vm.newTask);
-			vm.newTask = {};
+			// vm.newTask = {};
 		}
 
 	}

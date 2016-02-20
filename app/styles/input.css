@@ -1,0 +1,58 @@
+.add-task-form {
+	width: 100%;
+}
+
+.form-input-description {
+	float: left;
+	clear: right;
+	height: 4em;
+	text-indent: 2em;
+	width: 44.5em;
+	border: none;
+	display: inline-block;
+	background-color: rgb(241, 241, 241);
+}
+
+.form-input-priority {
+	height: 4em;
+	text-indent: 2em;
+	width: 14em;
+	border: none;
+	clear: left;
+	padding-left: 2em;
+	background-color: rgb(241, 241, 241);
+}
+
+.button {
+	float: right;
+	height: 4.22em;
+	text-indent: 2em;
+	background-color: rgb(56, 56, 55);
+	border: none;
+	color: rgb(241, 241, 241);
+	cursor: pointer;
+	text-align: center;
+	padding-right: 1.7em;
+}
+
+.tasks-active-row {
+	background-color: rgb(241, 241, 241);
+	font-size: 1em;
+	padding: 1em;
+}
+
+.form-input {
+	background-color: rgb(241, 241, 241);
+	border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.enter-new-task {
+	background-color: rgb(241, 241, 241);
+}
+
+
+/* form-input-description
+/* form-input-priority
+/* submit 
