@@ -19,9 +19,9 @@
                                 <!-- <label for="EnterNewTask">Enter New Task</label> ng-disabled="active.newTask.description"-->
                                 <div class="input">
                                     <input type="text"  ng-model="active.newTask.description" class="form-input-description active-task-data" placeholder="Enter New Task"> 
-                                    <input type="text" ng-model="active.newTask.priority" class="form-input-priority active-task-data" placeholder="Priority">
+                                    <input type="text" ng-model="active.newTask.priority"  class="form-input-priority active-task-data" placeholder="Priority">
                                 </div> 
-                                <button type="submit" class="button" ng-click="active.addTask(input)">Add</button>
+                                <button type="submit" class="button" ng-click="active.addTask(input)" ng-disabled="!active.newTask.description">Add</button>
 
                             </div>
                         </form>
