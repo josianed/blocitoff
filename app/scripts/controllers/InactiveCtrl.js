@@ -38,7 +38,7 @@
 
 		function didTaskExpire(task) {
 			var SECONDS_PER_DAY = 60 * 60 * 24;
-			var SEVEN_DAYS_SECS = 0.001 * SECONDS_PER_DAY;
+			var SEVEN_DAYS_SECS = 7 * SECONDS_PER_DAY;
 			var taskAgeMs = getTaskAge(task);
 			var didExpire = (taskAgeMs / 1000) >= SEVEN_DAYS_SECS;
 			return didExpire;

@@ -25,18 +25,25 @@ th {
 	text-decoration: line-through;
 }
 
-.active-task-data-description {
+/*.active-task-data-description {
 	width: 66.6%;
 }
 
 .active-task-data-priority {
 	width: 33.3%;
+}*/
+
+.ion-checkmark {
+	font-size: 1em;
+	text-indent: 1em;
+	width: 10%;
 }
 
 .table-row-labels {
 	height: 1em;
 	font-size: 0.9em;
 }
+
 
 
 
