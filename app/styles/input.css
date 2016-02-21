@@ -3,44 +3,43 @@
 }
 
 .form-input-description {
-	/*float: left;
-	height: 4em;
-	width: 66.6%;
-	text-indent: 2em;*/
+	float: left;
+	height: 3em;
+	text-indent: 2em;
 	border: none;
-/*	display: inline-block;*/
+	display: inline-block;
 	background-color: rgb(241, 241, 241);
-	/*padding-right: 3em;*/
+	padding-right: 3em;
 }
 
 .input {
-	/*float: left;
-	width: 90%;*/
+	float: left;
+	width: 90%;
 	background-color: rgb(241, 241, 241);
-	/*padding-right: 0.8em;*/
 }
 
 .button, .priority-levels {
-	/*float: right;
-	height: 4.22em;*/
+	float: right;
+	height: 3.3em;
 	background-color: rgb(56, 56, 55);
 	border: none;
 	color: rgb(241, 241, 241);
 	cursor: pointer;
 	text-align: center;
-	/*width: 8%;
-	padding: 0;*/
+	width: 10%;
+	padding: 0;
 }
 
-/*.priority-levels {
-	width: 25%;
+.priority-levels {
+	width: 20%;
 	position: relative;
-}*/
+	margin-right: 0.1em;
+}
 
 .tasks-active-row {
 	background-color: rgb(241, 241, 241);
-	/*font-size: 1em;
-	padding: 1em;*/
+	font-size: 1em;
+	padding: 1em;
 }
 
 .form-input {
@@ -51,8 +50,3 @@
 .enter-new-task {
 	background-color: rgb(241, 241, 241);
 }
-
-
-/* form-input-description
-/* form-input-priority
-/* submit 

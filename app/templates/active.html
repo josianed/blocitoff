@@ -5,32 +5,32 @@
 <section class="active">
     <pre ng-if="false">{{active|json}}</pre>
     <div class="tasks-active">
+
+     
+        <form>
+            <div class="add-task-form">
+                <div class="input">
+                    <input type="text"  ng-model="active.newTask.description" class="form-input-description active-task-data" placeholder="Enter New Task"> 
+                    <select class="priority-levels" ng-model="active.newTask.priority">
+                        <option value="" disabled selected>Select Priority</option>
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+                </div> 
+                <button type="submit" class="button" ng-click="active.addTask(input)" ng-disabled="!active.newTask.description">Add</button>
+            </div>
+        </form>
+         
+
         <table class="tasks-active-table">
             <thead> 
-                 <tr class="table-row-labels">
+                <tr class="table-row-labels">
                     <th class="table-row-labels description">Task Description</th>
                     <th class="table-row-labels priority">Priority</th>
                 </tr>
-                <tr>
-                    <td colspan="3">
-                        <form>
-                            <div class="add-task-form">
-                                <div class="input">
-                                    <input type="text"  ng-model="active.newTask.description" class="form-input-description active-task-data" placeholder="Enter New Task"> 
-                                    <select class="priority-levels" ng-model="active.newTask.priority">
-                                        <option value="" disabled selected>Select Priority</option>
-                                        <option value="High">High</option>
-                                        <option value="Medium">Medium</option>
-                                        <option value="Low">Low</option>
-                                    </select>
-                                </div> 
-                                <button type="submit" class="button" ng-click="active.addTask(input)" ng-disabled="!active.newTask.description">Add</button>
 
-                            </div>
-                        </form>
-                    </td>
-                </tr>
-               
+
             </thead>
             <tbody>	
                 <tr class="tasks-active-row" ng-repeat="task in active.tasks" ng-if="!active.didTaskExpire(task)">
