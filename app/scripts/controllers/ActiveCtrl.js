@@ -15,6 +15,7 @@
 		vm.didTaskExpire = didTaskExpire;
 		vm.addTask = addTask;
 		vm.newTask = {};
+		vm.taskCompleted = taskCompleted;
 
 		activate();
 
@@ -56,6 +57,12 @@
 			// vm.newTask.priority = "High";
 			vm.tasks.$add(vm.newTask);
 			vm.newTask = {};
+		}
+
+		function taskCompleted(task) {
+			var markedComplete = true;
+			console.log("marked as complete " + markedComplete);
+			return markedComplete;
 		}
 
 	}

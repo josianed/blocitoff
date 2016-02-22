@@ -29,16 +29,17 @@
                     <th class="table-row-labels description">Task Description</th>
                     <th class="table-row-labels priority">Priority</th>
                 </tr>
-
-
             </thead>
+  
             <tbody>	
-                <tr class="tasks-active-row" ng-repeat="task in active.tasks" ng-if="!active.didTaskExpire(task)">
+                <tr class="tasks-active-row" ng-repeat="task in active.tasks" ng-if="!active.didTaskExpire(task)" ng-hide="complete">
                     <td class="active-task-data-description">{{ task.description }}</td>
                     <td class="active-task-data-priority">{{ task.priority }}</td>
-                    <td class="ion-checkmark"></td>
+                    <td class="ion-checkmark" ng-click="active.taskCompleted(task)" ng-click="complete=true"></td>
                 </tr>
             </tbody>
+
         </table>
+
     </div>
 </section>
