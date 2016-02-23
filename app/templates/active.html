@@ -6,7 +6,7 @@
     <pre ng-if="false">{{active|json}}</pre>
     <div class="tasks-active">
 
-     
+     <pre>TASKS: {{active.tasks|json}}</pre>
         <form>
             <div class="add-task-form">
                 <div class="input">
@@ -32,10 +32,10 @@
             </thead>
   
             <tbody>	
-                <tr class="tasks-active-row" ng-repeat="task in active.tasks" ng-if="!active.didTaskExpire(task)" ng-hide="complete">
+                <tr class="tasks-active-row" ng-repeat="task in active.tasks" ng-if="!active.didTaskExpire(task)">
                     <td class="active-task-data-description">{{ task.description }}</td>
                     <td class="active-task-data-priority">{{ task.priority }}</td>
-                    <td class="ion-checkmark" ng-click="active.taskCompleted(task)" ng-click="complete=true"></td>
+                    <td class="ion-checkmark"><input type="checkbox" ng-model="task.completed" ng-change="active.update_task_completed(task, $index)"></td>
                 </tr>
             </tbody>
 

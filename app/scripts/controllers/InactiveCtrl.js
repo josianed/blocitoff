@@ -14,6 +14,7 @@
 		var vm = this;
 
 		vm.didTaskExpire = didTaskExpire;
+		vm.taskCompleted = taskCompleted;
 
 		activate();
 
@@ -42,6 +43,12 @@
 			var taskAgeMs = getTaskAge(task);
 			var didExpire = (taskAgeMs / 1000) >= SEVEN_DAYS_SECS;
 			return didExpire;
+		}
+
+		function taskCompleted(task) {
+			var markedComplete = true;
+			console.log("marked as complete " + markedComplete);
+			return markedComplete;
 		}
 
 	}

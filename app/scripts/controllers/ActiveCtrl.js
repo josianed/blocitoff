@@ -6,9 +6,9 @@
 		.module('blocitoff')
 		.controller(CONTROLLER_ID, ActiveCtrl);
 
-	ActiveCtrl.$inject = ['$scope', '$log', '$firebaseArray'];
+	ActiveCtrl.$inject = ['$scope', '$log', '$firebaseArray', '$firebaseObject'];
 
-	function ActiveCtrl($scope, $log, $firebaseArray) {
+	function ActiveCtrl($scope, $log, $firebaseArray, $firebaseObject) {
 		
 		var vm = this;
 		//bindable methods
@@ -16,6 +16,8 @@
 		vm.addTask = addTask;
 		vm.newTask = {};
 		vm.taskCompleted = taskCompleted;
+		vm.update_task_completed = update_task_completed;
+		vm.tasks = [];
 
 		activate();
 
@@ -25,11 +27,12 @@
 			var ref = new Firebase("https://dazzling-inferno-2350.firebaseio.com/");
 
 			vm.tasks = $firebaseArray(ref);
-			// retrieve date task was added
-			ref.once("child_added", function(snapshot) {
-				var newTask = snapshot.val();
-				var taskAdded = newTask.ts;
-			});
+			// // retrieve date task was added
+			// ref.once("child_added", function(snapshot) {
+			// 	var newTask = snapshot.val();
+			// 	var taskAdded = newTask.ts;
+			// 	var isComplete = newTask.completed;
+			// });
 		}
 		
 
@@ -54,15 +57,37 @@
 			var now = new Date();
 			// vm.newTask.description = "Hello";
 			vm.newTask.ts = now.toUTCString();
+			vm.newTask.completed = false;
 			// vm.newTask.priority = "High";
 			vm.tasks.$add(vm.newTask);
 			vm.newTask = {};
 		}
 
+		// function taskCompleted(task) {
+		// 	var markedComplete = true;
+		// 	console.log("marked as complete " + markedComplete);
+		// 	// vm.task.isComplete = true;
+		// 	// vm.tasks.$save(task);
+		// 	return markedComplete;
+		// 	// return isComplete;
+		// }
+
 		function taskCompleted(task) {
-			var markedComplete = true;
-			console.log("marked as complete " + markedComplete);
-			return markedComplete;
+			console.log("completed!")
+			vm.tasks.$save(task);
+		}
+
+		function update_task_completed(task, index) {
+			console.log(task, index);
+			// alert(task.completed);
+			// task.$save();
+			
+			var refToObj = new Firebase("https://dazzling-inferno-2350.firebaseio.com/" + task.$id);
+
+			var t = $firebaseObject(refToObj);
+			t.completed = task.completed;
+			t.$save();
+			activate();
 		}
 
 	}
